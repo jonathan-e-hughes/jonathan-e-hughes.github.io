@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan E. Hughes - Biography</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/2016_cu_maincampus_aerial8ga_bw.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 3px solid rgb(187, 167, 136); /* PMS 4525 C */
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .profile, .bio {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: #ccc 1px solid;
+            width: 100%;
+        }
+        .profile img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+        .bio img {
+            float: left;
+            margin-right: 20px;
+            max-width: 150px;
+        }
+        .bio h2 {
+            color: #333;
+        }
+        .bio p {
+            text-align: justify;
+            color: #333;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div> <!-- Overlay for semi-transparent effect -->
+
+<div class="container">
+    <header>
+        <div class="container">
+            <h1>Jonathan E. Hughes</h1>
+            <!-- Navigation menu -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#bio">Biography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <!-- Biography section -->
+        <div class="bio" id="bio">
+            <h2>Biography</h2>
+            <img src="images/image.png" alt="Jonathan E. Hughes">
+            <p>Jonathan Hughes is an Associate Professor of Economics and a Fellow in the Renewable and Sustainable Energy Institute (RASEI) at the University of Colorado at Boulder. He received his Ph.D. in Transportation Technology and Policy from the University of California at Davis in 2009. He has a background in mechanical engineering (BSE, Duke University) and materials science (MSE, Cornell University). His research interests include recreation on public lands, climate change policy, freight transportation, traffic congestion, electricity and renewable energy markets.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Jonathan E. Hughes - University of Colorado at Boulder</p>
+</footer>
+
+</body>
+</html>
