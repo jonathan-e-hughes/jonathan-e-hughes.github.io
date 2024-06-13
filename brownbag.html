@@ -8,8 +8,18 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f8f8f8;
+            padding: 0;
+            background: url('images/2016_cu_maincampus_aerial8ga_bw.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
         }
         .container {
             width: 80%;
@@ -18,6 +28,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
         header {
             background: #333;
@@ -48,6 +60,8 @@
     </style>
 </head>
 <body>
+
+<div class="overlay"></div> <!-- Overlay for semi-transparent effect -->
 
 <div class="container">
     <header>
