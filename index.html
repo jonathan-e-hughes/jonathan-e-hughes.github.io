@@ -1,114 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan E. Hughes</title>
+    <title>Jonathan E. Hughes - University of Colorado at Boulder</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-color: #f8f8f8;
         }
-        header, footer {
-            background-color: #f4f4f4;
-            padding: 20px;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        header h1, header p {
-            margin: 0;
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 10px;
-        }
-        nav ul li a {
+        header a {
+            color: #fff;
             text-decoration: none;
-            color: #666;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-        footer ul {
-            list-style: none;
+        header ul {
             padding: 0;
+            list-style: none;
         }
-        footer ul li {
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .profile, .publications {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: #ccc 1px solid;
+        }
+        .profile {
+            width: 30%;
+        }
+        .publications {
+            width: 65%;
+        }
+        .profile img {
+            max-width: 100%;
+        }
+        .publications h2, .profile h2 {
+            color: #333;
+        }
+        .publications ul {
+            padding: 0;
+            list-style: none;
+        }
+        .publications li {
             margin: 10px 0;
         }
-        footer ul li a {
-            text-decoration: none;
-            color: #666;
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
-
 <body>
-    <header>
+
+<header>
+    <div class="container">
         <h1>Jonathan E. Hughes</h1>
-        <p>Associate Professor of Economics, University of Colorado at Boulder</p>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Bio & CV</a></li>
-                <li><a href="#">Working Papers</a></li>
-                <li><a href="#">Published Papers</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main>
+<div class="container main-content">
+    <div class="profile" id="profile">
+        <h2>Profile</h2>
+        <img src="profile_picture.jpg" alt="Jonathan E. Hughes">
+        <p><strong>Jonathan E. Hughes</strong></p>
+        <p>Associate Professor</p>
+        <p>Associate Chair for Graduate Studies</p>
+        <p>Department of Economics</p>
+        <p>University of Colorado at Boulder</p>
+        <p>Economics 102</p>
+        <p><strong>Phone:</strong> (303) 735-0220</p>
+        <p><strong>Email:</strong> <a href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a></p>
+        <p><strong>Vita:</strong> <a href="Hughes_CV_January_2024.pdf">pdf</a></p>
+        <p><a href="http://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a></p>
+    </div>
+
+    <div class="publications" id="publications">
         <h2>Publications</h2>
         <ul>
-            <li>"The Role of Modal Substitution in Rebound Effects Within US Freight Transportation" - Forthcoming at Nature Energy. <a href="Main_files/BH_CrossRebound_NatureEnergy.pdf">Rebound.pdf</a></li>
-            <li>"Decline in traffic congestion increased accident severity in the wake of COVID-19" - Transportation Research Record. <a href="Main_files/COVID_Accidents.pdf">COVID_Accidents.pdf</a></li>
-            <li>"The Value of Rarity: Evidence from a Collectible Good" - Journal of Industrial Economics. <a href="Main_files/Rarity_latest.pdf">Rarity.pdf</a></li>
-            <li>"Food vs. Fuel? Impacts of petroleum shipments on agricultural prices" - Journal of the Association of Environmental and Resource Economists. <a href="Main_files/BHS_Latest.pdf">Rail_Grain.pdf</a></li>
-            <li>"Who (Else) Benefits from Electricity Deregulation? Coal prices, natural gas and price discrimination" - Economic Inquiry. <a href="Main_files/Rail_Coal_latest.pdf">Rail_Coal.pdf</a></li>
+            <li>"The Role of Modal Substitution in Rebound Effects Within US Freight Transportation" (With James Bushnell). Forthcoming at Nature Energy. <a href="BH_CrossRebound_NatureEnergy.pdf">Rebound.pdf</a></li>
+            <li>"Decline in traffic congestion increased accident severity in the wake of COVID-19" (With Daniel Kaffine and Leah Kaffine). Transportation Research Record, 2677(4), pp. 892-903, April 2023. <a href="COVID_Accidents.pdf">COVID_Accidents.pdf</a></li>
+            <li>"The Value of Rarity: Evidence from a Collectible Good". Journal of Industrial Economics, 70(1), pp. 147-167. March 2022. <a href="Rarity_latest.pdf">Rarity.pdf</a></li>
+            <li>"Food vs. Fuel? Impacts of petroleum shipments on agricultural prices." (With James Bushnell and Aaron Smith). Journal of the Association of Environmental and Resource Economists, 9(1), pp. 79-112. January 2022. <a href="BHS_Latest.pdf">Rail_Grain.pdf</a></li>
+            <li>"Who (Else) Benefits from Electricity Deregulation? Coal prices, natural gas and price discrimination." (With Ian Lange). Economic Inquiry, 58(3), pp. 1053-1075, July 2020. <a href="Rail_Coal_latest.pdf">Rail_Coal.pdf</a></li>
+            <li>"When Should Carpools in HOV Lanes be Encouraged?" (With Daniel Kaffine). Economic Inquiry, 57(1), pp. 667-684, January 2019. <a href="EncorageHOVHughesKaffine.pdf">Encourage_HOV.pdf</a></li>
+            <li>"Strategic Policy Choice in State-Level Regulation: The EPA's Clean Power Plan" (With James Bushnell, Stephen Holland and Christopher Knittel). American Economic Journal: Economic Policy, 9(2), May 2017. <a href="CleanPowerPlan_latest.pdf">CleanPowerPlan_latest.pdf</a></li>
+            <li>"When is Increasing Consumption of Common Property Optimal? Sorting, Congestion and Entry in the Commons" (With Daniel Kaffine). Journal of Environmental Economics and Management, 81, January 2017. <a href="HK_Linked_Theory_latest.pdf">Linked Common Property.pdf</a></li>
+            <li>"Some Inconvenient Truths About Climate Change Policy: The Distributional Impacts of Transportation Policies" (With Stephen Holland, Christopher Knittel and Nathan Parker). The Review of Economics and Statistics, 97(5), December 2015. <a href="ClimatePoliticalEcon.pdf">ClimatePoliticalEcon.pdf</a></li>
+            <li>"Unintended Consequences of Transportation Carbon Policies" (With Stephen Holland, Christopher Knittel and Nathan Parker). Energy Journal, 36(3), July 2015. <a href="Unintended_latest.pdf">Unintended_latest.pdf</a></li>
+            <li>"Getting Green with Solar Subsidies: Evidence from the California Solar Initiative" (With Molly Podolefsky). Journal of the Association of Environmental and Resource Economists, 2(2), June 2015. <a href="PV_Sudsidies.pdf">PV_Subsidies</a></li>
+            <li>"Carpooling and Driver Responses to Fuel Price Changes: Evidence from Traffic Flows in Los Angeles" (With Antonio Bento and Daniel Kaffine). Journal of Urban Economics, 77, September 2013. <a href="GasPricesCarpooling_R1.pdf">HOV_Gas_Prices.pdf</a></li>
+            <li>"Market Power in the Rail Transport of Fuel Ethanol". Journal of Environmental Economics and Management, 62(2), September 2011. <a href="Ethanol_RR_latest.pdf">Ethanol_RR.pdf</a></li>
+            <li>"Greenhouse Gas Reductions Under Low Carbon Fuel Standards?" (With Stephen Holland and Christopher Knittel). American Economic Journal: Economic Policy, 1(1), February 2009. <a href="JHughes_LowCarbonFuelStandards.pdf">Low_Carbon_Fuel_Standards.pdf</a></li>
+            <li>"Evidence of a Shift in the Short-Run Price Elasticity of Gasoline Demand" (With Christopher Knittel and Daniel Sperling). Energy Journal, 29(1), January 2008. <a href="JHughes_GasolineDemand.pdf">Gasoline_Demand.pdf</a></li>
         </ul>
-        
-        <h2>Working Papers</h2>
-        <ul>
-            <li>"Are 'Buying Frenzies' Equitable? Distributional Effects of Congested Online Markets." <a href="Main_files/Reservations 042324.pdf">BuyingFrenzies.pdf</a></li>
-        </ul>
+    </div>
+</div>
 
-        <h2>Contact Information</h2>
-        <p>Jonathan E. Hughes<br>
-        Associate Professor<br>
-        Associate Chair for Graduate Studies<br>
-        Department of Economics<br>
-        University of Colorado at Boulder<br>
-        Economics 102<br>
-        Phone: (303) 735-0220<br>
-        Email: <a href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a></p>
+<footer>
+    <p>&copy; 2024 Jonathan E. Hughes - University of Colorado at Boulder</p>
+</footer>
 
-        <h2>Vita</h2>
-        <p>Vita: <a href="Main_files/Hughes%20CV%20May%202024.pdf">pdf</a><br>
-        Google Scholar: <a href="http://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a></p>
-    </main>
-
-    <footer>
-        <h3>Administrative Assistant</h3>
-        <ul>
-            <li>Dagmar Trantinova</li>
-            <li>Phone: 617-253-9748</li>
-            <li>Email: <a href="mailto:dagmar@mit.edu">dagmar@mit.edu</a></li>
-        </ul>
-        <p>&copy; 2024 Jonathan E. Hughes</p>
-    </footer>
 </body>
-
 </html>
