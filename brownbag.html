@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Environmental Brown Bag</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,31 +25,63 @@
         .container {
             width: 80%;
             margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             position: relative;
             z-index: 1;
         }
         header {
             background: #333;
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            padding-top: 30px;
+            min-height: 70px;
             border-bottom: 3px solid rgb(187, 167, 136); /* PMS 4525 C */
         }
-        h1 {
-            margin: 0;
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-        .content {
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
             margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
         }
-        .content p {
-            line-height: 1.6;
+        .profile, .bio {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: #ccc 1px solid;
+            width: 100%;
         }
-        .schedule p {
-            margin: 10px 0;
+        .profile img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+        .bio img {
+            float: left;
+            margin-right: 20px;
+            max-width: 150px;
+        }
+        .bio h2 {
+            color: #333;
+        }
+        .bio p {
+            text-align: justify;
+            color: #333;
         }
         a {
             color: #666; /* Change to a more discrete color */
@@ -74,7 +107,7 @@
 <div class="container">
     <header>
         <div class="container">
-            <h1>Environmental Brown Bag</h1>
+            <h1>Jonathan E. Hughes</h1>
             <!-- Navigation menu -->
             <nav>
                 <ul>
