@@ -8,461 +8,147 @@
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="preload" href="/cv/Hughes CV May 2024.pdf" as="document" />
   <style>
+    /* Minimal, clean, content-first */
     :root{
-      --bg:#0d0d0d;           /* dark base */
-      --ink:#111;             /* light-mode heading/text on cards */
-      --text:#222;            /* body text on cards */
-      --muted:#5a5a5a;        /* subtle text */
-      --link:#3b4a66;         /* link color */
-      --accent:#bba788;       /* CU gold-ish (PMS 4525-ish) */
-      --card:#ffffffcc;       /* glass */
-      --shadow: 0 10px 25px rgba(0,0,0,.18);
-      --radius:16px;
+      --ink:#111;
+      --sub:#333;
+      --muted:#666;
+      --accent:#8c7a56; /* subtle CU-like gold */
+      --border:#e6e6e6;
+      --maxw: 880px;
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --ink:#f2f2f2;
-        --text:#eaeaea;
-        --muted:#b7b7b7;
-        --link:#cbd5e1;
-        --card:#0d0d0dcc;
-      }
-    }
-
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
-      background: url('/images/2016_cu_maincampus_aerial8ga_bw.jpeg') center/cover fixed no-repeat,
-                  linear-gradient(180deg,#0b0b0b,#111);
-      color:var(--ink);
-      line-height:1.45;
-    }
-    .overlay{ position:fixed; inset:0; pointer-events:none;
-      background: radial-gradient(80% 60% at 50% 0%, rgba(255,255,255,.88), rgba(255,255,255,.6) 40%, rgba(255,255,255,.35) 100%);
-    }
-    @media (prefers-color-scheme: dark){
-      .overlay{ background: radial-gradient(80% 60% at 50% 0%, rgba(0,0,0,.55), rgba(0,0,0,.65) 40%, rgba(0,0,0,.75) 100%); }
-    }
+    html,body{height:100%}
+    body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:#ffffff; line-height:1.5; }
 
-    header{
-      position:sticky; top:0; z-index:1000;
-      backdrop-filter: saturate(140%) blur(6px);
-      background: rgba(0,0,0,.55);
-      border-bottom: 2px solid var(--accent);
-    }
-    .nav{ max-width:1120px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .brand{ color:#fff; font-weight:800; letter-spacing:.2px; font-size:20px; margin:0; }
-    .brand small{ font-weight:500; opacity:.85; }
-    nav a{ color:#f7f7f7; text-decoration:none; margin-left:18px; font-size:15px; opacity:.95; }
-    nav a:hover{ text-decoration:underline; }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 64px; }
 
-    .hero{ max-width:1120px; margin:36px auto 22px; padding:22px; display:grid; grid-template-columns: 120px 1fr; gap:22px; background: var(--card); border:1px solid rgba(0,0,0,.08); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .hero img{ width:120px; height:120px; border-radius: 50%; object-fit: cover; }
-    .hero h1{ margin:0 0 6px; font-size:28px; color: var(--ink); }
-    .hero p{ margin:4px 0; color: var(--muted); }
-    .btnrow{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
-    .btn{ display:inline-block; padding:10px 14px; border-radius:999px; border:1px solid var(--accent); text-decoration:none; color:#111; background:#fff8; backdrop-filter: blur(4px); font-weight:600; }
-    .btn:hover{ background:#fff; }
-    @media (prefers-color-scheme: dark){ .btn{ color:#eee; background:#0006; } .btn:hover{ background:#000; } }
+    header{ border-top: 4px solid var(--accent); }
+    .mast{ max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 10px; }
+    .name{ margin:0; font-size: 32px; font-weight: 800; letter-spacing:.2px; }
+    .title{ margin:6px 0 0; color:var(--sub); font-size:18px; font-weight:500; }
 
-    main{ max-width:1120px; margin:0 auto; padding:0 22px 60px; }
+    .quick{ margin-top:14px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{ display:inline-block; padding:10px 14px; border:1px solid var(--accent); border-radius:10px; text-decoration:none; color:var(--ink); }
+    .btn:hover{ background:#faf7f0; }
 
-    .grid{ display:grid; gap:16px; grid-template-columns: repeat(12,1fr); }
-    .col-left{ grid-column: span 4; }
-    .col-right{ grid-column: span 8; }
-    @media (max-width: 920px){ .grid{ grid-template-columns: 1fr; } .col-left, .col-right{ grid-column:auto; } }
+    nav{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .navrow{ max-width: var(--maxw); margin:0 auto; padding:10px 20px; display:flex; gap:18px; flex-wrap:wrap; }
+    .navrow a{ text-decoration:none; color:var(--sub); }
+    .navrow a:hover{ color:var(--ink); text-decoration:underline; }
 
-    .card{ background: var(--card); border:1px solid rgba(0,0,0,.08); border-radius: var(--radius); padding:18px; box-shadow: var(--shadow); }
-    .section-title{ margin:0 0 10px; color: var(--ink); }
+    h2{ font-size:22px; margin: 28px 0 10px; }
+    p{ margin: 10px 0; }
+    .grid2{ display:grid; grid-template-columns: 1fr; gap:24px; }
 
-    .profileRow p{ margin:.2rem 0; color: var(--text); }
-    .profileRow a{ color: var(--link); }
+    /* Feature cards are extremely light */
+    .feature{ border:1px solid var(--border); border-radius:12px; padding:18px; }
+    .feature h3{ margin:0 0 4px; font-size:19px; }
+    .meta{ color:var(--muted); font-size:14px; margin-top:2px; }
+    .links a{ margin-right:14px; text-decoration:none; border-bottom:1px solid var(--accent); color:var(--ink); }
+    .links a:hover{ color:var(--accent); }
 
-    .toolbar{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin: 18px 0 10px; }
-    .chip{ border:1px solid #ccc; padding:8px 12px; border-radius:999px; background:#fff9; cursor:pointer; user-select:none; font-size:14px; }
-    .chip.active{ border-color: var(--accent); box-shadow: 0 0 0 3px rgba(187,167,136,.25) inset; }
-    .search{ padding:10px 12px; border-radius:10px; border:1px solid #ccc; min-width:240px; }
+    /* Simple publication list */
+    .publist{ list-style:none; padding:0; margin:0; }
+    .publist li{ padding:14px 0; border-bottom:1px solid var(--border); }
+    .pub-title{ margin:0 0 4px; font-weight:600; }
+    .pub-meta{ margin:0; color:var(--muted); font-size:14px; }
+    .pub-actions{ margin-top:6px; font-size:14px; }
+    .pub-actions a{ margin-right:14px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
+    .pub-actions a:hover{ color:var(--accent); }
 
-    /* Publication cards */
-    .pub{ display:grid; grid-template-columns: 1fr auto; gap:8px; }
-    .pub h3{ margin:0; font-size:18px; color: var(--ink); }
-    .meta{ font-size:14px; color: var(--muted); }
-    .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
-    .tag{ font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #ddd; background:#fff9; }
-    .actions{ display:flex; gap:10px; align-items:center; }
-    .a-btn{ font-size:14px; text-decoration:none; border-bottom:1px dashed var(--accent); color: var(--link); }
-    .a-btn:hover{ text-decoration:underline; }
+    footer{ border-top:1px solid var(--border); margin-top:40px; }
+    .foot{ max-width: var(--maxw); margin:0 auto; padding:16px 20px; color:var(--muted); font-size:14px; }
 
-    footer{ text-align:center; color:#efefef; padding:16px; border-top:2px solid var(--accent); background:#0008; backdrop-filter: blur(6px); }
-
-    /* Modal */
-    dialog{ border:none; border-radius:16px; padding:20px; max-width:720px; width:90%; }
-    dialog::backdrop{ background: rgba(0,0,0,.5); }
-    .close{ float:right; border:none; background:transparent; font-size:22px; cursor:pointer; }
+    /* Mobile tweaks */
+    @media (max-width: 480px){ .name{font-size:26px} }
   </style>
 </head>
 <body>
-  <div class="overlay" aria-hidden="true"></div>
-
   <header>
-    <div class="nav">
-      <div class="brand">Jonathan E. Hughes <small>• University of Colorado Boulder</small></div>
-      <nav aria-label="Primary">
-        <a href="bio.html">Biography</a>
-        <a href="brownbag.html">Environmental Brown Bag</a>
-        <a href="students.html">Current Ph.D. Students</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero" aria-label="Profile">
-    <img src="/images/shapeimage_2.png" alt="Portrait of Jonathan E. Hughes" loading="lazy" />
-    <div>
-      <h1>Associate Professor of Economics</h1>
-      <p>Research: transportation economics • public resource allocation • environmental policy</p>
-      <p>Economics 102 • (303) 735-0220 • <a href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a></p>
-      <div class="btnrow">
-        <a class="btn" href="/cv/Hughes CV May 2024.pdf">Download CV</a>
+    <div class="mast">
+      <h1 class="name">Jonathan E. Hughes</h1>
+      <p class="title">Associate Professor of Economics · University of Colorado Boulder</p>
+      <div class="quick">
+        <a class="btn" href="/cv/Hughes CV May 2024.pdf">CV (PDF)</a>
+        <a class="btn" href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a>
         <a class="btn" href="http://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a>
       </div>
     </div>
-  </section>
+    <nav>
+      <div class="navrow">
+        <a href="bio.html">Biography</a>
+        <a href="brownbag.html">Environmental Brown Bag</a>
+        <a href="students.html">Current Ph.D. Students</a>
+      </div>
+    </nav>
+  </header>
 
-  <main>
-    <div class="grid">
-      <!-- Left column: Profile and quick links (from old version) -->
-      <aside class="col-left">
-        <div class="card profileRow">
-          <h2 class="section-title">Profile</h2>
-          <p><strong>Jonathan E. Hughes</strong></p>
-          <p>Associate Professor</p>
-          <p>Department of Economics</p>
-          <p>University of Colorado at Boulder</p>
-          <p>Economics 102</p>
-          <p><strong>Phone:</strong> (303) 735-0220</p>
-          <p><strong>Email:</strong> <a href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a></p>
-          <p><strong>Vita:</strong> <a href="/cv/Hughes CV May 2024.pdf">pdf</a></p>
-          <p><a href="http://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a></p>
-        </div>
+  <main class="wrap">
+    <!-- Super concise profile block (keeps old details without a sidebar) -->
+    <section aria-label="Contact" id="contact">
+      <h2>Contact</h2>
+      <p>Economics 102 · Phone: (303) 735-0220</p>
+      <p><strong>Email:</strong> <a href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a></p>
+    </section>
 
-        <div class="card">
-          <h2 class="section-title">News</h2>
-          <ul>
-            <li><strong>Sep 2024</strong> — <em>Nature Energy</em> paper published.</li>
-            <li><strong>Apr 2023</strong> — TRR article on traffic & COVID-19.</li>
-            <li><strong>R&R</strong> — “Managing No-Shows…” at JEEM.</li>
-          </ul>
-        </div>
+    <!-- Featured content to showcase key items without clutter -->
+    <section aria-label="Featured">
+      <h2>Featured</h2>
+      <div class="grid2">
+        <article class="feature">
+          <h3>Managing No-Shows in Public Resource Allocation: The Economics of Campground Reservations</h3>
+          <p class="meta">Revisions requested at <i>Journal of Environmental Economics and Management</i>. Working paper.</p>
+          <p class="links"><a href="/publications/CancellationPolicy_short.pdf">PDF</a></p>
+        </article>
+        <article class="feature">
+          <h3>The Role of Modal Substitution in Rebound Effects Within US Freight Transportation</h3>
+          <p class="meta"><i>Nature Energy</i>, 9, 1153–1160 (Sep 2024) — with James Bushnell.</p>
+          <p class="links"><a href="/publications/BH_CrossRebound_NatureEnergy.pdf">PDF</a> <a href="https://doi.org/10.1038/s41560-024-01568-w">DOI</a></p>
+        </article>
+      </div>
+    </section>
 
-        <div class="card">
-          <h2 class="section-title">Research highlights</h2>
-          <ul>
-            <li>Distributional effects in congested online markets.</li>
-            <li>No-show economics in public resource allocation.</li>
-            <li>Modal substitution & rebound in freight.</li>
-          </ul>
-        </div>
-      </aside>
+    <!-- Working papers -->
+    <section aria-label="Working Papers" id="working-papers">
+      <h2>Working Papers</h2>
+      <ul class="publist">
+        <li>
+          <p class="pub-title">Managing No-Shows in Public Resource Allocation: The Economics of Campground Reservations.</p>
+          <p class="pub-meta">Revisions requested at <i>Journal of Environmental Economics and Management</i>.</p>
+          <p class="pub-actions"><a href="/publications/CancellationPolicy_short.pdf">PDF</a></p>
+        </li>
+        <li>
+          <p class="pub-title">Are “Buying Frenzies” Equitable? Distributional Effects of Congested Online Markets.</p>
+          <p class="pub-meta">Preprint.</p>
+          <p class="pub-actions"><a href="/publications/Reservations 042324.pdf">PDF</a></p>
+        </li>
+      </ul>
+    </section>
 
-      <!-- Right column: Filters + Publications list with all items from old version -->
-      <section class="col-right">
-        <div class="toolbar" role="region" aria-label="Filters">
-          <input id="q" class="search" type="search" placeholder="Search publications (title, journal, year, topic)..." aria-label="Search publications" />
-          <div class="chip" data-tag="Working Paper" role="button" aria-pressed="false">Working Papers</div>
-          <div class="chip" data-tag="Journal" role="button" aria-pressed="false">Journal Articles</div>
-          <div class="chip" data-tag="Transportation" role="button" aria-pressed="false">Transportation</div>
-          <div class="chip" data-tag="Environment" role="button" aria-pressed="false">Environment</div>
-          <div class="chip" data-tag="Energy" role="button" aria-pressed="false">Energy</div>
-        </div>
-
-        <!-- Working Papers -->
-        <div class="card">
-          <h2 class="section-title">Working Papers</h2>
-
-          <article class="pub" data-tags="Working Paper Environment Public Resource Allocation">
-            <div>
-              <h3>Managing No-Shows in Public Resource Allocation: The Economics of Campground Reservations</h3>
-              <div class="meta">Revisions requested at <i>Journal of Environmental Economics and Management</i>.</div>
-              <div class="tags"><span class="tag">Working Paper</span><span class="tag">Environment</span><span class="tag">Public</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/CancellationPolicy_short.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Working Paper Distribution Online Markets">
-            <div>
-              <h3>Are “Buying Frenzies” Equitable? Distributional Effects of Congested Online Markets</h3>
-              <div class="meta">Preprint</div>
-              <div class="tags"><span class="tag">Working Paper</span><span class="tag">Distribution</span><span class="tag">Markets</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/Reservations 042324.pdf">PDF</a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Publications -->
-        <div class="card" style="margin-top:16px;">
-          <h2 class="section-title">Publications</h2>
-
-          <article class="pub" data-tags="Journal 2024 Transportation Energy">
-            <div>
-              <h3>The Role of Modal Substitution in Rebound Effects Within US Freight Transportation</h3>
-              <div class="meta"><i>Nature Energy</i>, volume 9, pp. 1153–1160, September 2024. With James Bushnell. DOI: <a href="https://doi.org/10.1038/s41560-024-01568-w">10.1038/s41560-024-01568-w</a></div>
-              <div class="tags"><span class="tag">2024</span><span class="tag">Transportation</span><span class="tag">Energy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/BH_CrossRebound_NatureEnergy.pdf">PDF</a>
-              <a class="a-btn" href="https://doi.org/10.1038/s41560-024-01568-w">DOI</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2023 Transportation Safety COVID">
-            <div>
-              <h3>Decline in traffic congestion increased accident severity in the wake of COVID-19</h3>
-              <div class="meta"><i>Transportation Research Record</i>, 2677(4), pp. 892–903, April 2023. With Daniel Kaffine and Leah Kaffine.</div>
-              <div class="tags"><span class="tag">2023</span><span class="tag">Transportation</span><span class="tag">Safety</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/COVID_Accidents.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2022 IO Collectibles">
-            <div>
-              <h3>The Value of Rarity: Evidence from a Collectible Good</h3>
-              <div class="meta"><i>Journal of Industrial Economics</i>, 70(1), pp. 147–167, March 2022.</div>
-              <div class="tags"><span class="tag">2022</span><span class="tag">Industrial Organization</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/Rarity_latest.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2022 Transportation Agriculture Energy">
-            <div>
-              <h3>Food vs. Fuel? Impacts of petroleum shipments on agricultural prices</h3>
-              <div class="meta"><i>Journal of the Association of Environmental and Resource Economists</i>, 9(1), pp. 79–112, January 2022. With James Bushnell and Aaron Smith.</div>
-              <div class="tags"><span class="tag">2022</span><span class="tag">Transportation</span><span class="tag">Energy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/BHS_Latest.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Rail_Grain.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2020 Transportation Energy Regulation">
-            <div>
-              <h3>Who (Else) Benefits from Electricity Deregulation? Coal prices, natural gas and price discrimination</h3>
-              <div class="meta"><i>Economic Inquiry</i>, 58(3), pp. 1053–1075, July 2020. With Ian Lange.</div>
-              <div class="tags"><span class="tag">2020</span><span class="tag">Energy</span><span class="tag">Regulation</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/Rail_Coal_latest.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2019 Transportation HOV Policy">
-            <div>
-              <h3>When Should Carpools in HOV Lanes be Encouraged?</h3>
-              <div class="meta"><i>Economic Inquiry</i>, 57(1), pp. 667–684, January 2019. With Daniel Kaffine.</div>
-              <div class="tags"><span class="tag">2019</span><span class="tag">Transportation</span><span class="tag">Policy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/EncorageHOVHughesKaffine.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Encourage_HOV.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2017 Energy Policy Environment">
-            <div>
-              <h3>Strategic Policy Choice in State-Level Regulation: The EPA's Clean Power Plan</h3>
-              <div class="meta"><i>American Economic Journal: Economic Policy</i>, 9(2), May 2017. With James Bushnell, Stephen Holland and Christopher Knittel.</div>
-              <div class="tags"><span class="tag">2017</span><span class="tag">Energy</span><span class="tag">Policy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/CleanPowerPlan_latest.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2017 Environment Commons">
-            <div>
-              <h3>When is Increasing Consumption of Common Property Optimal? Sorting, Congestion and Entry in the Commons</h3>
-              <div class="meta"><i>Journal of Environmental Economics and Management</i>, 81, January 2017. With Daniel Kaffine.</div>
-              <div class="tags"><span class="tag">2017</span><span class="tag">Environment</span><span class="tag">Commons</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/HK_Linked_Theory_latest.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Linked Common Property.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2015 Transportation Distribution Policy">
-            <div>
-              <h3>Some Inconvenient Truths About Climate Change Policy: The Distributional Impacts of Transportation Policies</h3>
-              <div class="meta"><i>The Review of Economics and Statistics</i>, 97(5), December 2015. With Stephen Holland, Christopher Knittel and Nathan Parker.</div>
-              <div class="tags"><span class="tag">2015</span><span class="tag">Transportation</span><span class="tag">Distribution</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/ClimatePoliticalEcon.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2015 Energy Policy">
-            <div>
-              <h3>Unintended Consequences of Transportation Carbon Policies</h3>
-              <div class="meta"><i>Energy Journal</i>, 36(3), July 2015. With Stephen Holland, Christopher Knittel and Nathan Parker.</div>
-              <div class="tags"><span class="tag">2015</span><span class="tag">Energy</span><span class="tag">Policy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/Unintended_latest.pdf">PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2015 Energy Solar Subsidies">
-            <div>
-              <h3>Getting Green with Solar Subsidies: Evidence from the California Solar Initiative</h3>
-              <div class="meta"><i>Journal of the Association of Environmental and Resource Economists</i>, 2(2), June 2015. With Molly Podolefsky.</div>
-              <div class="tags"><span class="tag">2015</span><span class="tag">Energy</span><span class="tag">Solar</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/PV_Sudsidies.pdf">PDF</a>
-              <a class="a-btn" href="/publications/PV_Subsidies">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2013 Transportation HOV Gas Prices">
-            <div>
-              <h3>Carpooling and Driver Responses to Fuel Price Changes: Evidence from Traffic Flows in Los Angeles</h3>
-              <div class="meta"><i>Journal of Urban Economics</i>, 77, September 2013. With Antonio Bento and Daniel Kaffine.</div>
-              <div class="tags"><span class="tag">2013</span><span class="tag">Transportation</span><span class="tag">HOV</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/GasPricesCarpooling_R1.pdf">PDF</a>
-              <a class="a-btn" href="/publications/HOV_Gas_Prices.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2011 Rail Energy Market Power">
-            <div>
-              <h3>Market Power in the Rail Transport of Fuel Ethanol</h3>
-              <div class="meta"><i>Journal of Environmental Economics and Management</i>, 62(2), September 2011.</div>
-              <div class="tags"><span class="tag">2011</span><span class="tag">Rail</span><span class="tag">Energy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/Ethanol_RR_latest.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Ethanol_RR.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2009 Energy Policy LCFS">
-            <div>
-              <h3>Greenhouse Gas Reductions Under Low Carbon Fuel Standards?</h3>
-              <div class="meta"><i>American Economic Journal: Economic Policy</i>, 1(1), February 2009. With Stephen Holland and Christopher Knittel.</div>
-              <div class="tags"><span class="tag">2009</span><span class="tag">Energy</span><span class="tag">Policy</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/JHughes_LowCarbonFuelStandards.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Low_Carbon_Fuel_Standards.pdf">Alt PDF</a>
-            </div>
-          </article>
-
-          <hr>
-
-          <article class="pub" data-tags="Journal 2008 Energy Demand Gasoline">
-            <div>
-              <h3>Evidence of a Shift in the Short-Run Price Elasticity of Gasoline Demand</h3>
-              <div class="meta"><i>Energy Journal</i>, 29(1), January 2008. With Christopher Knittel and Daniel Sperling.</div>
-              <div class="tags"><span class="tag">2008</span><span class="tag">Energy</span><span class="tag">Demand</span></div>
-            </div>
-            <div class="actions">
-              <a class="a-btn" href="/publications/JHughes_GasolineDemand.pdf">PDF</a>
-              <a class="a-btn" href="/publications/Gasoline_Demand.pdf">Alt PDF</a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    © <span id="yr"></span> Jonathan E. Hughes • University of Colorado Boulder
-  </footer>
-
-  <script>
-    // Footer year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Live search + chips
-    const q = document.getElementById('q');
-    const chips = [...document.querySelectorAll('.chip')];
-    const pubs = [...document.querySelectorAll('.pub')];
-    let activeTags = new Set();
-
-    function applyFilters(){
-      const term = (q.value || '').toLowerCase();
-      pubs.forEach(p => {
-        const tags = (p.dataset.tags || '').toLowerCase();
-        const text = p.innerText.toLowerCase();
-        const tagMatch = activeTags.size === 0 || [...activeTags].every(t => tags.includes(t.toLowerCase()));
-        const termMatch = !term || text.includes(term);
-        p.style.display = (tagMatch && termMatch) ? 'grid' : 'none';
-      });
-    }
-    q.addEventListener('input', applyFilters);
-    chips.forEach(c => {
-      c.addEventListener('click', () => {
-        const t = c.dataset.tag;
-        const pressed = c.classList.toggle('active');
-        c.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-        if(pressed) activeTags.add(t); else activeTags.delete(t);
-        applyFilters();
-      });
-    });
-  </script>
-
-  <!-- JSON-LD for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Jonathan E. Hughes",
-    "affiliation":{"@type":"CollegeOrUniversity","name":"University of Colorado Boulder"},
-    "jobTitle":"Associate Professor of Economics",
-    "email":"mailto:jonathan.e.hughes@colorado.edu",
-    "url":"https://yourdomain.edu/",
-    "sameAs":["https://scholar.google.com/citations?user=x2U1mGcAAAAJ"]
-  }
-  </script>
-</body>
-</html>
+    <!-- Publications (verbatim from original, presented cleanly) -->
+    <section aria-label="Publications" id="publications">
+      <h2>Publications</h2>
+      <ul class="publist">
+        <li>
+          <p class="pub-title">The Role of Modal Substitution in Rebound Effects Within US Freight Transportation. (With James Bushnell).</p>
+          <p class="pub-meta"><i>Nature Energy</i>, volume 9, pp. 1153–1160, September 2024. DOI: <a href="https://doi.org/10.1038/s41560-024-01568-w">10.1038/s41560-024-01568-w</a></p>
+          <p class="pub-actions"><a href="/publications/BH_CrossRebound_NatureEnergy.pdf">PDF</a></p>
+        </li>
+        <li>
+          <p class="pub-title">Decline in traffic congestion increased accident severity in the wake of COVID-19. (With Daniel Kaffine and Leah Kaffine).</p>
+          <p class="pub-meta"><i>Transportation Research Record</i>, 2677(4), pp. 892–903, April 2023.</p>
+          <p class="pub-actions"><a href="/publications/COVID_Accidents.pdf">PDF</a></p>
+        </li>
+        <li>
+          <p class="pub-title">The Value of Rarity: Evidence from a Collectible Good.</p>
+          <p class="pub-meta"><i>Journal of Industrial Economics</i>, 70(1), pp. 147–167. March 2022.</p>
+          <p class="pub-actions"><a href="/publications/Rarity_latest.pdf">PDF</a></p>
+        </li>
+        <li>
+          <p class="pub-title">Food vs. Fuel? Impacts of petroleum shipments on agricultural prices. (With James Bushnell and Aaron Smith).</p>
+          <p class="pub-meta"><i>Journal of the Association of Environmental and Resource Economists</i>, 9(1), pp. 79–112. January 2022.</p>
+          <p class="pub-actions"><a href="/publications/BHS_Latest.pdf">PDF</a> <a href="/publications/Rail_Grain.pdf">PDF (alt)</a></p>
+        </li>
+        <li>
+          <p class=
