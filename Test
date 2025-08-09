@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jonathan E. Hughes — University of Colorado Boulder</title>
+  <meta name="description" content="Jonathan E. Hughes, Associate Professor of Economics at CU Boulder. Research in transportation economics, public resource allocation, and environmental policy." />
+  <link rel="preload" href="/cv/Hughes CV May 2024.pdf" as="document" />
+  <link rel="icon" href="/images/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0d0d0d;           /* dark base */
+      --text:#111;            /* light-mode text on cards */
+      --ink:#222;
+      --muted:#555;
+      --link:#4a5568;
+      --accent:#bba788;       /* CU gold-ish (PMS 4525-ish) */
+      --card:#ffffffcc;       /* glass */
+      --shadow: 0 10px 25px rgba(0,0,0,.18);
+      --radius:16px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --text:#eaeaea;
+        --ink:#f3f3f3;
+        --muted:#b6b6b6;
+        --link:#cbd5e1;
+        --card:#101010cc;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background: url('/images/2016_cu_maincampus_aerial8ga_bw.jpeg') center/cover fixed no-repeat,
+                  linear-gradient(180deg,#0b0b0b, #111);
+      color: var(--ink);
+    }
+
+    /* Overlay gradient for legibility */
+    .overlay{
+      position:fixed; inset:0;
+      background: radial-gradient(80% 60% at 50% 0%, rgba(255,255,255,.88), rgba(255,255,255,.6) 40%, rgba(255,255,255,.35) 100%);
+      pointer-events:none;
+    }
+    @media (prefers-color-scheme: dark){
+      .overlay{ background: radial-gradient(80% 60% at 50% 0%, rgba(0,0,0,.55), rgba(0,0,0,.65) 40%, rgba(0,0,0,.75) 100%); }
+    }
+
+    header{
+      position: sticky; top:0; z-index: 100;
+      backdrop-filter: saturate(140%) blur(6px);
+      background: rgba(0,0,0,.55);
+      border-bottom: 2px solid var(--accent);
+    }
+    .nav{
+      max-width:1100px; margin:0 auto; padding:14px 20px;
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .brand{ color:#fff; font-weight:700; letter-spacing:.2px; font-size:20px; margin:0; }
+    nav a{
+      color:#f7f7f7; text-decoration:none; margin-left:18px; font-size:15px;
+      opacity:.95;
+    }
+    nav a:hover{ text-decoration:underline; }
+
+    .hero{
+      max-width:1100px; margin:40px auto 24px; padding:24px;
+      display:grid; grid-template-columns: 120px 1fr; gap:24px;
+      background: var(--card); border:1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .hero img{ width:120px; height:120px; border-radius: 50%; object-fit: cover; }
+    .hero h1{ margin:0 0 6px; font-size:28px; color: var(--text); }
+    .hero p{ margin:4px 0; color: var(--muted); }
+    .btnrow{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:999px; border:1px solid var(--accent);
+      text-decoration:none; color:#111; background: #fff8; backdrop-filter: blur(4px);
+      font-weight:600;
+    }
+    .btn:hover{ background:#fff; }
+    @media (prefers-color-scheme: dark){
+      .btn{ color:#eee; background:#0006; }
+      .btn:hover{ background:#000; }
+    }
+
+    main{ max-width:1100px; margin:0 auto; padding: 0 24px 60px; }
+
+    /* Filters + layout */
+    .toolbar{
+      display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+      margin: 22px 0 8px;
+    }
+    .chip{
+      border:1px solid #ccc; padding:8px 12px; border-radius:999px; background:#fff9;
+      cursor:pointer; user-select:none; font-size:14px;
+    }
+    .chip.active{ border-color: var(--accent); box-shadow: 0 0 0 3px rgba(187,167,136,.25) inset; }
+    .search{ padding:10px 12px; border-radius:10px; border:1px solid #ccc; min-width:220px; }
+
+    .grid{
+      display:grid; gap:16px; grid-template-columns: repeat(12,1fr);
+    }
+    .col-left{ grid-column: span 4; }
+    .col-right{ grid-column: span 8; }
+    @media (max-width: 920px){
+      .grid{ grid-template-columns: 1fr; }
+      .col-left, .col-right{ grid-column: auto; }
+    }
+
+    .card{
+      background: var(--card); border:1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius); padding:18px; box-shadow: var(--shadow);
+    }
+    .section-title{ margin:0 0 8px; color: var(--text); }
+
+    /* Publication cards */
+    .pub{ display:grid; grid-template-columns: 1fr auto; gap:8px; }
+    .pub h3{ margin:0; font-size:18px; color: var(--text); }
+    .meta{ font-size:14px; color: var(--muted); }
+    .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+    .tag{ font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid #ddd; background:#fff9; }
+    .actions{ display:flex; gap:10px; align-items:center; }
+    .a-btn{ font-size:14px; text-decoration:none; border-bottom:1px dashed var(--accent); color: var(--link); }
+    .a-btn:hover{ text-decoration:underline; }
+
+    footer{
+      text-align:center; color:#efefef; padding:16px; border-top:2px solid var(--accent);
+      background:#0008; backdrop-filter: blur(6px);
+    }
+
+    /* Modal */
+    dialog{ border:none; border-radius:16px; padding:20px; max-width:720px; width:90%; }
+    dialog::backdrop{ background: rgba(0,0,0,.5); }
+    .close{ float:right; border:none; background:transparent; font-size:22px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <header>
+    <div class="nav">
+      <div class="brand">Jonathan E. Hughes</div>
+      <nav>
+        <a href="bio.html">Biography</a>
+        <a href="brownbag.html">Environmental Brown Bag</a>
+        <a href="students.html">Ph.D. Students</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Profile">
+    <img src="/images/shapeimage_2.png" alt="Portrait of Jonathan E. Hughes" loading="lazy" />
+    <div>
+      <h1>Associate Professor of Economics</h1>
+      <p>University of Colorado Boulder • Research: transportation economics, public resource allocation, environmental policy</p>
