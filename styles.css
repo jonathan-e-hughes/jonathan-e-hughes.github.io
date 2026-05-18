@@ -930,7 +930,7 @@ code {
 /* Compact brown bag hero */
 
 .hero-brownbag {
-  min-height: 220px;
+  min-height: 100px;
   display: flex;
   align-items: center;
 }
@@ -942,4 +942,35 @@ code {
 
 .hero-brownbag h1 {
   margin-bottom: 0;
+}
+
+/* Teaching hero image */
+
+.page-hero-teaching {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-teaching::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
+    url("images/2016_cu_maincampus_aerial8ga_bw.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  z-index: 0;
+}
+
+.page-hero-teaching .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-teaching h1,
+.page-hero-teaching .lead,
+.page-hero-teaching .eyebrow {
+  color: white;
 }
