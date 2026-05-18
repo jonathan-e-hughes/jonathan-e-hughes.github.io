@@ -1,137 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Environmental Brown Bag</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('images/2016_cu_maincampus_aerial8ga_bw.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: 3px solid rgb(187, 167, 136); /* PMS 4525 C */
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        .main-content {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border: #ccc 1px solid;
-            width: 100%;
-        }
-        .content h2 {
-            color: #333;
-        }
-        .content p, .schedule p {
-            text-align: justify;
-            color: #333;
-        }
-        a {
-            color: #666; /* Change to a more discrete color */
-            text-decoration: none; /* Remove underline */
-        }
-        a:hover {
-            color: #463C3C; /* Slightly darker on hover */
-            text-decoration: underline; /* Add underline on hover */
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Brown Bag | Jonathan E. Hughes</title>
+
+  <link rel="stylesheet" href="styles.css?v=20260517-figures-xs" />
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="index.html">Jonathan E. Hughes</a>
 
-<div class="overlay"></div> <!-- Overlay for semi-transparent effect -->
-
-<div class="container">
-    <header>
-        <div class="container">
-            <h1>Environmental Brown Bag</h1>
-            <!-- Navigation menu -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="mailto:jonathan.e.hughes@colorado.edu">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container main-content">
-        <div class="content">
-            <h2>Spring 2026</h2>
-            <p>Alternating Fridays 10:00-11:00 am (ECON 5)</p>
-            <p>Presentations can be for early-stage research ideas, preliminary results, or draft papers.</p>
-            <h2>Schedule</h2>
-            <div class="schedule">
-                <p>1/9 - Organizational meeting </p>
-                <p>1/23 - Alec T. </p>
-                <p>2/6 - Jack N. </p>
-                <p>2/20 - Joey K. and Jack K. </p>
-                <p>3/6 - Fengyu Z.</p>
-                <p>3/27 - Yuan Yuan W. and Leo Z. </p>
-                <p>4/10 - Boyang Y. </p>
-                <p>4/13 *MONDAY 10am - 11am Brown Bag (ECON 119), Amy Cross, Univ. of Alaska "The Spawning of a Greedy Job: Alaska's Set Net Fishing Under Limited Entry" </p>
-                <p>4/24 - Haeseong P. </p>
-            </div>
-        </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#policy-briefs">Policy Briefs</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="students.html">Students</a>
+        <a href="cv/Hughes%20CV%20April%202026.pdf">CV</a>
+        <a href="mailto:jonathan.e.hughes@colorado.edu">Contact</a>
+      </nav>
     </div>
-</div>
+  </header>
 
-<footer>
-    <p>&copy; 2024 Jonathan E. Hughes - University of Colorado at Boulder</p>
-</footer>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Workshop Series</p>
+        <h1>Environmental Brown Bag</h1>
 
+        <p class="lede">
+          Informal presentations and discussion of environmental,
+          transportation, and energy economics research at the
+          University of Colorado Boulder.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <div class="content-card">
+
+          <h2>Spring 2026</h2>
+
+          <p>
+            Alternating Fridays · 10:00–11:00 AM · ECON 5
+          </p>
+
+          <p>
+            Presentations may include early-stage research ideas,
+            preliminary findings, dissertation chapters, or draft papers.
+          </p>
+
+          <h2>Schedule</h2>
+
+          <div class="schedule-list">
+
+            <p><strong>1/9</strong> — Organizational meeting</p>
+
+            <p><strong>1/23</strong> — Alec T.</p>
+
+            <p><strong>2/6</strong> — Jack N.</p>
+
+            <p><strong>2/20</strong> — Joey K. and Jack K.</p>
+
+            <p><strong>3/6</strong> — Fengyu Z.</p>
+
+            <p><strong>3/27</strong> — Yuan Yuan W. and Leo Z.</p>
+
+            <p><strong>4/10</strong> — Boyang Y.</p>
+
+            <p>
+              <strong>4/13</strong> —
+              <em>Monday special session, 10:00–11:00 AM, ECON 119</em><br>
+
+              Amy Cross, University of Alaska<br>
+
+              “The Spawning of a Greedy Job:
+              Alaska's Set Net Fishing Under Limited Entry”
+            </p>
+
+            <p><strong>4/24</strong> — Haeseong P.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        &copy; 2026 Jonathan E. Hughes · University of Colorado Boulder
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
