@@ -926,3 +926,20 @@ code {
     padding: 0.65rem;
   }
 }
+
+/* Compact brown bag hero */
+
+.hero-brownbag {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-brownbag .hero-copy {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero-brownbag h1 {
+  margin-bottom: 0;
+}
