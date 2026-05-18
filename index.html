@@ -1,136 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jonathan E. Hughes — University of Colorado Boulder</title>
-  <meta name="description" content="Jonathan E. Hughes, Associate Professor of Economics at CU Boulder. Research in transportation economics, public resource allocation, and environmental policy." />
-  <link rel="icon" href="/images/favicon.ico" />
-  <link rel="preload" href="/cv/Hughes CV April 2026.pdf" as="document" />
-  <style>
-    :root{
-      --ink:#111;
-      --sub:#333;
-      --muted:#666;
-      --accent:#8c7a56;
-      --border:#e6e6e6;
-      --maxw: 880px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); line-height:1.5;
-      background: url('/images/2016_cu_maincampus_aerial8ga_bw.jpeg') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .overlay {background-color: rgba(255,255,255,0.9); min-height: 100%;}
-    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 64px; }
-    header{ border-top: 4px solid var(--accent); background-color: rgba(255,255,255,0.95); }
-    .mast{ max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 10px; display:flex; align-items:center; gap:20px; }
-    .mast img{ width:100px; height:100px; border-radius:50%; object-fit:cover; object-position: center top; flex-shrink:0; }
-    .mast-text{ flex:1; }
-    .name{ margin:0; font-size: 32px; font-weight: 800; }
-    .title{ margin:6px 0 0; color:var(--sub); font-size:18px; font-weight:500; }
-    .quick{ margin-top:14px; display:flex; gap:12px; flex-wrap:wrap; }
-    .btn{ display:inline-block; padding:10px 14px; border:1px solid var(--accent); border-radius:10px; text-decoration:none; color:var(--ink); background-color: rgba(255,255,255,0.8); }
-    .btn:hover{ background:#faf7f0; }
-    nav{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); background-color: rgba(255,255,255,0.95); }
-    .navrow{ max-width: var(--maxw); margin:0 auto; padding:10px 20px; display:flex; gap:18px; flex-wrap:wrap; }
-    .navrow a{ text-decoration:none; color:var(--sub); }
-    .navrow a:hover{ color:var(--ink); text-decoration:underline; }
-    h2{ font-size:22px; margin: 28px 0 10px; }
-    p{ margin: 10px 0; }
-    .publist{ list-style:none; padding:0; margin:0; }
-    .publist li{ padding:14px 0; border-bottom:1px solid var(--border); }
-    .pub-title{ margin:0 0 4px; font-weight:600; }
-    .pub-meta{ margin:0; color:var(--muted); font-size:14px; }
-    .pub-actions{ margin-top:6px; font-size:14px; }
-    .pub-actions a{ margin-right:14px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
-    .pub-actions a:hover{ color:var(--accent); }
-    .highlight-section{ background:rgba(250,250,250,0.95); border:1px solid var(--border); border-radius:10px; padding:20px; margin-top:30px; }
-    .highlight-section h2{ margin-top:0; }
-    footer{ border-top:1px solid var(--border); margin-top:40px; background-color: rgba(255,255,255,0.95); }
-    .foot{ max-width: var(--maxw); margin:0 auto; padding:16px 20px; color:var(--muted); font-size:14px; }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <header>
-      <div class="mast">
-        <img src="/images/shapeimage_2.png" alt="Jonathan E. Hughes" />
-        <div class="mast-text">
-          <h1 class="name">Jonathan E. Hughes</h1>
-          <p class="title">Associate Professor of Economics · University of Colorado Boulder</p>
-          <div class="quick">
-            <a class="btn" href="/cv/Hughes CV April 2026.pdf">CV (PDF)</a>
-            <a class="btn" href="mailto:jonathan.e.hughes@colorado.edu">jonathan.e.hughes@colorado.edu</a>
-            <a class="btn" href="http://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a>
-          </div>
-        </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonathan E. Hughes | Economics of Transportation, Energy, and Public Lands</title>
+    <meta
+      name="description"
+      content="Research on congestion, resource allocation, infrastructure, environmental policy, and equitable access to public lands."
+    >
+    <link rel="stylesheet" href="styles.css?v=20260517-figures-xs">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="brand-bar" aria-label="University affiliation">
+        <a href="https://www.colorado.edu/">University of Colorado Boulder</a>
       </div>
-      <nav>
-        <div class="navrow">
-          <a href="bio.html">Biography</a>
-          <a href="brownbag.html">Environmental Brown Bag</a>
-          <a href="students.html">Current Ph.D. Students</a>
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="site-title" href="index.html">
+          <img
+            class="nav-photo"
+            src="https://jonathan-e-hughes.github.io/images/shapeimage_2.png"
+            alt=""
+            aria-hidden="true"
+          >
+          <span>Jonathan E. Hughes</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="#research">Research</a>
+          <a href="#policy-briefs">Policy Briefs</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="https://jonathan-e-hughes.github.io/cv/Hughes%20CV%20April%202026.pdf">CV</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
 
-    <main class="wrap">
-      <section class="highlight-section">
-        <h2>Recent Highlights</h2>
-        <ul class="publist">
-      <li>
-      <p class="pub-title">Managing No-Shows in Public Resource Allocation: The Economics of Campground Reservations.</p>
-      <p class="pub-meta"><i>Journal of Environmental Economics and Management</i>, 135, January 2026.</p>
-      <p>Low prices, limited capacity and increased interest in outdoor recreation contribute to intense competition for public campsites in the United States. Yet, users and park managers report high vacancy rates due to unused reservations or “no-shows.” I develop a simple model for the campground reservation, cancellation and no-show decisions. I numerically simulate pricing policies at a hypothetical but representative park. When capacity constraints are binding, the cancellation fees charged by many parks increase no-shows and decrease consumer surplus. In contrast, modestly higher prices and no-show fees dramatically reduce no-shows and increase social surplus 8 to 15 percent. However, these policies create different distributional effects. Higher prices raise revenue but decrease consumer surplus and discourage reservations from lower income users when income is positively correlated with trip utility. No-show fees increase consumer surplus and do not materially affect the income distribution of users. The optimal no-show fee, equal to the lost consumer surplus from the marginal no-show, maximizes consumer surplus and increases social surplus 8.5 percent.</p>
-      <p class="pub-actions"><a href="/publications/CancellationPolicy_short.pdf">PDF</a> <a href="https://doi.org/10.1016/j.jeem.2025.103246">DOI</a></p>
-      </li>
-      <li>
-      <p class="pub-title">Online Reservation Systems, Buying Frenzies and Equitable Access to Public Lands.</p>
-      <p class="pub-meta"><i>Land Economics</i>, forthcoming.</p>
-      <p>Rationed access is an important tool to promote sustainable use of public lands.  However, online reservation systems can lead to "buying frenzies" when low prices create excess demand.  Using transaction-level data for river permits in the United States sold both by reservation-system buying frenzy and lottery, I show successful frenzy buyers reside in wealthier zip codes than those selected at random.  This effect increases with congestion and leads to an unequal distribution of consumption benefits where high-income zip codes receive 25 percent more recreational trip value.  These effects can undermine park managers’ efforts to provide equitable access through low fees.</p>
-      <p class="pub-actions"><a href="/publications/Reservations 010826.pdf">PDF</a> </p>
-    </li>
-        </ul>
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Research and Policy</p>
+            <h1>Transportation, energy, and public lands.</h1>
+            <p class="lead">
+              Research on congestion, resource allocation, infrastructure,
+              environmental policy, and equitable access to public lands.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#research">Explore Research</a>
+              <a class="button button-secondary" href="#policy-briefs">Read Policy Briefs</a>
+              <a class="button button-secondary" href="https://jonathan-e-hughes.github.io/cv/Hughes%20CV%20April%202026.pdf">CV</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Research themes">
+            <div>
+              <span class="panel-label">Current Focus</span>
+              <p>
+                Studying how reservation systems, lotteries, pricing, and
+                cancellation rules shape access, congestion, and equity on
+                public lands.
+              </p>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section id="working-papers">
-        <h2>Working Papers</h2>
-        <ul class="publist">
-          <li><p class="pub-title">Reservation Policies and Equity in National Park Access.</p><p class="pub-meta">Invited revisions resubmitted to <i>Nature Communications</i>.</p><p class="pub-actions"><a href="/publications/ReservationWindows.pdf">PDF</a></p></li>
-        </ul>
+      <section class="section" id="research">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Research Areas</p>
+            <h2>Organized around policy problems.</h2>
+          </div>
+
+          <div class="card-grid three-up">
+            <a class="research-card" href="research/recreation.html" aria-label="Learn more about outdoor recreation research">
+              <div class="card-media land" aria-hidden="true"></div>
+              <h3>Outdoor Recreation on Public Lands</h3>
+              <p>
+                Reservation systems, congestion management, lotteries, campground
+                access, timed entry, and recreation demand.
+              </p>
+              <span class="text-link">Learn More</span>
+            </a>
+
+            <a class="research-card" href="research/energy.html" aria-label="Learn more about energy economics research">
+              <div class="card-media energy" aria-hidden="true"></div>
+              <h3>Energy Economics</h3>
+              <p>
+                Electricity markets, fuel markets, climate policy, emissions,
+                infrastructure, and environmental regulation.
+              </p>
+              <span class="text-link">Learn More</span>
+            </a>
+
+            <a class="research-card" href="research/transportation.html" aria-label="Learn more about transportation economics research">
+              <div class="card-media transport" aria-hidden="true"></div>
+              <h3>Transportation Economics</h3>
+              <p>
+                Congestion, freight transportation, traffic externalities,
+                transit systems, mode choice, and transportation policy.
+              </p>
+              <span class="text-link">Learn More</span>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section id="publications">
-        <h2>Publications</h2>
-        <ul class="publist">
-          <li><p class="pub-title">Online Reservation Systems, Buying Frenzies and Equitable Access to Public Lands. </p><p class="pub-meta">Forthcoming at <i>Land Economics</i>.</p><p class="pub-actions"><a href="/publications/Reservations 100725.pdf">PDF</a></p></li>
-          <li><p class="pub-title">Managing No-Shows in Public Resource Allocation: The Economics of Campground Reservations.</p><p class="pub-meta"><i>Journal of Environmental Economics and Management</i>, 135, January 2026.</p><p class="pub-actions"><a href="/publications/CancellationPolicy_short.pdf">PDF</a><a href="https://doi.org/10.1016/j.jeem.2025.103246">DOI</a></p></p></li>
-          <li><p class="pub-title">The Role of Modal Substitution in Rebound Effects Within US Freight Transportation (With James Bushnell).</p><p class="pub-meta"><i>Nature Energy</i>, volume 9, pp. 1153-1160, September 2024.</p><p class="pub-actions"><a href="/publications/BH_CrossRebound_NatureEnergy.pdf">PDF</a><a href="https://doi.org/10.1038/s41560-024-01568-w">DOI</a></p></p></li>
-          <li><p class="pub-title">Decline in traffic congestion increased accident severity in the wake of COVID-19 (With Daniel Kaffine and Leah Kaffine).</p><p class="pub-meta"><i>Transportation Research Record</i>, 2677(4), pp. 892-903, April 2023.</p><p class="pub-actions"><a href="/publications/COVID_Accidents.pdf">PDF</a><a href="https://doi.org/10.1177/03611981221103239">DOI</a></p></p></li>
-          <li><p class="pub-title">The Value of Rarity: Evidence from a Collectible Good.</p><p class="pub-meta"><i>Journal of Industrial Economics</i>, 70(1), pp. 147-167, March 2022.</p><p class="pub-actions"><a href="/publications/Rarity_latest.pdf">PDF</a><a href="https://doi.org/10.1111/joie.12262">DOI</a></p></p></li>
-          <li><p class="pub-title">Food vs. Fuel? Impacts of petroleum shipments on agricultural prices. (With James Bushnell and Aaron Smith).</p><p class="pub-meta"><i>Journal of the Association of Environmental and Resource Economists</i>, 9(1), pp. 79-112, January 2022.</p><p class="pub-actions"><a href="/publications/BHS_Latest.pdf">PDF</a><a href="https://doi.org/10.1086/716522">DOI</a></p></p></li>
-          <li><p class="pub-title">Who (Else) Benefits from Electricity Deregulation? Coal prices, natural gas and price discrimination. (With Ian Lange).</p><p class="pub-meta"><i>Economic Inquiry</i>, 58(3), pp. 1053-1075, July 2020.</p><p class="pub-actions"><a href="/publications/Rail_Coal_latest.pdf">PDF</a><a href="https://doi.org/10.1111/ecin.12896">DOI</a></p></p></li>
-          <li><p class="pub-title">When Should Carpools in HOV Lanes be Encouraged? (With Daniel Kaffine).</p><p class="pub-meta"><i>Economic Inquiry</i>, 57(1), pp. 667-684, January 2019.</p><p class="pub-actions"><a href="/publications/EncorageHOVHughesKaffine.pdf">PDF</a><a href="https://doi.org/10.1111/ecin.12728">DOI</a></p></p></li>
-          <li><p class="pub-title">Strategic Policy Choice in State-Level Regulation: The EPA's Clean Power Plan (With James Bushnell, Stephen Holland and Christopher Knittel).</p><p class="pub-meta"><i>American Economic Journal: Economic Policy</i>, 9(2), May 2017.</p><p class="pub-actions"><a href="/publications/CleanPowerPlan_latest.pdf">PDF</a><a href="https://doi.org/10.1257/pol.20150237">DOI</a></p></p></li>
-          <li><p class="pub-title">When is Increasing Consumption of Common Property Optimal? Sorting, Congestion and Entry in the Commons (With Daniel Kaffine).</p><p class="pub-meta"><i>Journal of Environmental Economics and Management</i>, 81, January 2017.</p><p class="pub-actions"><a href="/publications/HK_Linked_Theory_latest.pdf">PDF</a><a href="https://doi.org/10.1016/j.jeem.2016.05.003">DOI</a></p></p></li>
-          <li><p class="pub-title">Some Inconvenient Truths About Climate Change Policy: The Distributional Impacts of Transportation Policies (With Stephen Holland, Christopher Knittel and Nathan Parker).</p><p class="pub-meta"><i>The Review of Economics and Statistics</i>, 97(5), December 2015.</p><p class="pub-actions"><a href="/publications/ClimatePoliticalEcon.pdf">PDF</a><a href="https://doi.org/10.1162/REST_a_00452">DOI</a></p></p></li>
-          <li><p class="pub-title">Unintended Consequences of Transportation Carbon Policies (With Stephen Holland, Christopher Knittel and Nathan Parker).</p><p class="pub-meta"><i>Energy Journal</i>, 36(3), July 2015.</p><p class="pub-actions"><a href="/publications/Unintended_latest.pdf">PDF</a><a href="https://doi.org/10.5547/01956574.36.3.shol">DOI</a></p></p></li>
-          <li><p class="pub-title">Getting Green with Solar Subsidies: Evidence from the California Solar Initiative (With Molly Podolefsky).</p><p class="pub-meta"><i>Journal of the Association of Environmental and Resource Economists</i>, 2(2), June 2015.</p><p class="pub-actions"><a href="/publications/PV_Sudsidies.pdf">PDF</a><a href="https://doi.org/10.1086/681131">DOI</a></p></p></li>
-          <li><p class="pub-title">Carpooling and Driver Responses to Fuel Price Changes: Evidence from Traffic Flows in Los Angeles (With Antonio Bento and Daniel Kaffine).</p><p class="pub-meta"><i>Journal of Urban Economics</i>, 77, September 2013.</p><p class="pub-actions"><a href="/publications/GasPricesCarpooling_R1.pdf">PDF</a><a href="https://doi.org/10.1016/j.jue.2013.03.002">DOI</a></p></p></li>
-          <li><p class="pub-title">Market Power in the Rail Transport of Fuel Ethanol.</p><p class="pub-meta"><i>Journal of Environmental Economics and Management</i>, 62(2), September 2011.</p><p class="pub-actions"><a href="/publications/Ethanol_RR_latest.pdf">PDF</a><a href="https://doi.org/10.1016/j.jeem.2011.01.001">DOI</a></p></p></li>
-          <li><p class="pub-title">Greenhouse Gas Reductions Under Low Carbon Fuel Standards? (With Stephen Holland and Christopher Knittel).</p><p class="pub-meta"><i>American Economic Journal: Economic Policy</i>, 1(1), February 2009.</p><p class="pub-actions"><a href="/publications/JHughes_LowCarbonFuelStandards.pdf">PDF</a><a href="https://doi.org/10.1257/pol.1.1.106">DOI</a></p></p></li>
-          <li><p class="pub-title">Evidence of a Shift in the Short-Run Price Elasticity of Gasoline Demand (With Christopher Knittel and Daniel Sperling).</p><p class="pub-meta"><i>Energy Journal</i>, 29(1), January 2008.</p><p class="pub-actions"><a href="/publications/JHughes_GasolineDemand.pdf">PDF</a><a href="https://doi.org/10.5547/ISSN0195-6574-EJ-Vol29-No1-9">DOI</a></p></p></li>
-        </ul>
+      <section class="section section-muted" id="policy-briefs">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Policy Briefs</p>
+            <h2>Short research summaries for public-facing audiences.</h2>
+            <p>
+              Briefs translate papers into key findings, practical implications,
+              and graphics designed for policymakers, journalists, agencies, and
+              interdisciplinary readers.
+            </p>
+          </div>
+
+          <div class="brief-card-grid">
+            <article class="brief-card">
+              <h3>Campground Reservations and Public Land Access</h3>
+              <p>
+                Reservation rules can determine whether scarce campsites are used
+                efficiently or sit empty as no-shows.
+              </p>
+              <div class="stat-row">
+                <span class="stat-number">8-15%</span>
+                <span class="stat-label">Simulated social surplus gains from policies that reduce campground no-shows.</span>
+              </div>
+              <a class="button button-primary" href="policy-briefs/campground-reservations.html">Open Brief</a>
+            </article>
+
+            <article class="brief-card">
+              <h3>Reservation Policies and Equity in National Park Access</h3>
+              <p>
+                Advance purchase windows and competition for permits can shift
+                access toward higher-income users.
+              </p>
+              <div class="stat-row">
+                <span class="stat-number">3-5%</span>
+                <span class="stat-label">Higher median household income among reservation holders in the most competitive markets.</span>
+              </div>
+              <a class="button button-primary" href="policy-briefs/national-park-access.html">Open Brief</a>
+            </article>
+
+            <article class="brief-card">
+              <h3>Buying Frenzies and Equitable Access to Public Lands</h3>
+              <p>
+                First-come online releases can reward speed and flexibility when
+                low prices create excess demand.
+              </p>
+              <div class="stat-row">
+                <span class="stat-number">25%</span>
+                <span class="stat-label">More recreational trip value received by high-income zip codes.</span>
+              </div>
+              <a class="button button-primary" href="policy-briefs/reservation-buying-frenzies.html">Open Brief</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="contact">
+        <div class="container contact-panel">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Contact Information</h2>
+            <p>
+              For research, teaching, seminar, or media inquiries, email is the
+              best way to reach me.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:jonathan.e.hughes@colorado.edu">Email</a>
+            <a class="button button-secondary" href="https://scholar.google.com/citations?user=x2U1mGcAAAAJ&hl=en">Google Scholar</a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <div class="foot">© <span id="yr"></span> Jonathan E. Hughes • University of Colorado Boulder</div>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Jonathan E. Hughes</strong>
+          <p>University of Colorado Boulder</p>
+        </div>
+        <a class="footer-affiliation" href="https://www.colorado.edu/economics">Department of Economics</a>
+      </div>
     </footer>
-  </div>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
-</body>
+  </body>
 </html>
