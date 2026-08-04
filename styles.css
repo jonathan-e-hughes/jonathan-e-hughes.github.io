@@ -149,6 +149,26 @@ code {
   text-decoration: none;
 }
 
+.site-title-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.site-title-name {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.site-title-subtitle {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-muted, #666);
+  letter-spacing: 0.02em;
+}
+
 .nav-photo {
   width: 48px;
   height: 48px;
